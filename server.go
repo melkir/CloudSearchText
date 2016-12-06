@@ -4,9 +4,7 @@ import (
 	"fmt"
 	"io"
 	"os"
-
 	"net/http"
-
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"math"
@@ -62,7 +60,7 @@ func search(c echo.Context) error {
 	//var found[] int;
 	//for i := 0; i <= numberFiles; i++ {
 		// go worker(i, jobs, results)
-		//found[i] = findString("./part_" + i, value)
+		//found[i] = findString("./part_" + strconv.Itoa(i), value)
 	//}
 
 	return c.HTML(http.StatusOK, fmt.Sprintf("<p>Text found line: %d</p>", line))
